@@ -29,7 +29,7 @@ app.use(session({
     resave:false
 }))
 app.use((req,res, next)=>{
-    res.local.message = req.session.message;
+    res.locals.message = req.session.message;
     delete req.session.message;
     next();
 })
@@ -37,7 +37,8 @@ app.use((req,res, next)=>{
 // set template engine
 app.set('view engine', 'ejs');
 
-
+//route prefix
+app.use("", require("./routes/routes"))
 app.get('/', (req,res)=>{
     res.send("Hello World");
 });
