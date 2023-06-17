@@ -97,16 +97,24 @@ nav .nav-middle{
     justify-content: center;
     align-items: center;
     background-color: #fff;
+    border-radius: 10px;
 }
 .filters{
     display: flex;
     margin: 2rem 0;
+    justify-content: space-between;
     gap: 1rem;
 }
 .filters .search-box{
     border: 1px solid rgba(0, 0, 0, .4);
     padding: .5rem;
     border-radius: 6px;
+}
+.filters select{
+    background-color: transparent;
+    padding: 10px;
+    border: 1px solid var(--purple);
+    border-radius: 4px;
 }
 .books{
     display: grid;
@@ -116,12 +124,15 @@ nav .nav-middle{
 }
 .card-book{
     width: 14rem;
+    height: 20rem;
     margin-left: 1.5rem;
     position: relative;
 }
 
 .card-book img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .card-book:hover>.book-info{
     position: absolute;
