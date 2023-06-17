@@ -12,16 +12,23 @@ The following is a library management system made using node js  and template en
 
 ### client side
 Register as a member
+
 Borrow book and return book
+
 Review books
+
 Read ebooks online
 
 
 ### Admin side
 Know your people visiting your library
+
 Get analytics of what time you get most people
+
 Get the books that are mostly borrowed
+
 Track people borrowing books
+
 Add new books by scanning them
 
 
