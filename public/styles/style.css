@@ -18,7 +18,7 @@
     font-family: 'Arimo', sans-serif;
 }
 /* ===============================NAVBAR============================================================== */
-header{
+ header{
     height: 5rem;
     background-color: #eee;
 
@@ -63,18 +63,64 @@ nav .nav-middle{
     color: #fff;
     cursor: pointer;
 }
-/* ================================CONTAINER======================================================== */
-
+/* ================================CONTAINER BOOKS -INDEX======================================================== */
 .container{
-    padding: 3% 5%;
+    padding: 3% 3%;
+}
+.book-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.books{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    background-color: #fff;
+    row-gap: .5rem;
+}
+.card-book{
+    width: 14rem;
+    margin-left: 1.5rem;
+    position: relative;
 }
 
+.card-book img{
+    width: 100%;
+}
+.card-book:hover>.book-info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, .7);
+}
+.book-info{
+    display: none;
+    cursor: pointer;
+}
 
-
-
-
-
-
+.book-info h4{
+    color: #a1a1a1;
+}
+.book-info h5{
+    color: #ebd9d9;
+}
+.book-info h3{
+    color: #f1eeee;
+}
+.book-info p{
+    text-align: center;
+    color: aliceblue;
+    font-size: 12px;
+}
 
 
 /* =====================================MOBILE DESING =================================================*/
@@ -97,6 +143,8 @@ nav .nav-middle{
         top: 5.5rem;
         left: 0;
         right: 0;
+        background-color: #eee;
+        z-index: 100;
     }
     .mobile-nav li{
         display: flex;
@@ -122,4 +170,38 @@ nav .nav-middle{
         padding: 1rem 0;
     }
     
+}
+
+/* ================================================================================================ */
+@media(max-width:1200px) {
+    .books{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        background-color: #fff;
+        row-gap: .5rem;
+    }
+}
+@media(max-width:1000px) {
+    .books{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        background-color: #fff;
+        row-gap: .5rem;
+    }
+}
+@media(max-width:768px) {
+    .books{
+        display: grid;
+        grid-template-columns: auto auto;
+        background-color: #fff;
+        row-gap: .5rem;
+    }
+}
+@media(max-width:522px) {
+    .books{
+        display: grid;
+        grid-template-columns: auto;
+        background-color: #fff;
+        row-gap: .5rem;
+    }
 }
