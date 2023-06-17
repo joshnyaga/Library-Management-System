@@ -96,7 +96,7 @@ nav .nav-middle{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: #eee;
     border-radius: 10px;
 }
 .filters{
