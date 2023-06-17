@@ -1,6 +1,17 @@
 <%- include("layouts/header") %>
 <div class="container">
 <section class="book-section">
+    <div class="filters">
+        <input type="text" class="form-control search-box">
+        <select name="filter-box" id="">
+            <option value="All">All Categories</option>
+            <option value="All">Fiction</option>
+            <option value="All">Non Fiction</option>
+            <option value="All">Documentaries</option>
+            <option value="All">Science</option>
+            <option value="All">Computing</option>
+        </select>
+    </div>
     <div class="books">
         <!-- single book -->
         <div class="card-book" id="card-book" >

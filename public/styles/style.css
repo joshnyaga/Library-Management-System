@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 :root{
     --blue: #00aeef;
     --red: #ec1c25;
@@ -15,8 +15,21 @@
     outline: none;
     list-style: none;
     color: var(--black);
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
+body{
+    background: url("https://live.staticflickr.com/65535/52194010367_c396957a6a_b.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+.scaffold{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .6);
+}
+
 /* ===============================NAVBAR============================================================== */
  header{
     height: 5rem;
@@ -63,20 +76,42 @@ nav .nav-middle{
     color: #fff;
     cursor: pointer;
 }
-/* ================================CONTAINER BOOKS -INDEX======================================================== */
+/* ================================CONTAINER ======================================================== */
 .container{
     padding: 3% 3%;
 }
+.center-page{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+
+}
+
+
+/* =================================BOOKS PAGE - INDEX=============================================================================== */
 .book-section{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
+}
+.filters{
+    display: flex;
+    margin: 2rem 0;
+    gap: 1rem;
+}
+.filters .search-box{
+    border: 1px solid rgba(0, 0, 0, .4);
+    padding: .5rem;
+    border-radius: 6px;
 }
 .books{
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    background-color: #fff;
+    
     row-gap: .5rem;
 }
 .card-book{
@@ -122,6 +157,34 @@ nav .nav-middle{
     font-size: 12px;
 }
 
+/* ======================================LOGIN ====================================================================== */
+.top-form{
+    display: flex;
+    justify-content: space-between;
+}
+.form-login{
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+form .form-group{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+form input{
+    border: 1px solid rgba(0, 0, 0, .2);;
+    padding: .5rem 1rem;
+    border-radius: 2px;
+    width: 24rem;
+}
+.btn-submit{
+    width: 10rem;
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
 
 /* =====================================MOBILE DESING =================================================*/
 /* =====================================NAVBAR MAIIN ==================================================*/
