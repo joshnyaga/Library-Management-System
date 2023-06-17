@@ -4,9 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <h1>Hello Homepage</h1>
+    <header>
+        <nav class="navbar">
+            <div class="img-logo">
+                <img src="/images/kcl_logo.png" alt="">
+            </div>
+            <div class="nav-toggler" id="toggler"  onclick="toggle()">
+                
+                <i class="fa fa-bars fa-2x" id="togglericon"></i>
+            </div>
+            <ul class="mobile-nav" id="mobile-nav">
+                <li><a href="">Books</a></li>
+                <li><a href="">Borrow</a></li>
+                <li><a href="">Return</a></li>
+                <li><a href="">E-books</a></li>
+                <button class="btn btn-nav btn-login">Login</button>
+                <button class="btn btn-nav btn-member">Become a member</button>
+            </ul>
+            <ul class="nav-middle">
+                <li><a href="">Books</a></li>
+                <li><a href="">Borrow</a></li>
+                <li><a href="">Return</a></li>
+                <li><a href="">E-books</a></li>
+            </ul>
+            
+            <div class="nav-buttons">
+                <button class="btn btn-login">Login</button>
+                <button class="btn btn-member">Become a member</button>
+            </div>
+        </nav>
+    </header>
+    <script>
+        function toggle(){
+            //get the whole menu
+            var menu= document.getElementById("mobile-nav")
+            //get the toggle icon to change from bara to close
+            var togglerIcon = document.getElementById("togglericon")
+            
+            
+            if(togglerIcon.classList.contains("fa-bars")){
+                //menu should show
+                menu.style.display="block";
+                togglerIcon.classList.remove("fa-bars");
+                togglerIcon.classList.add("fa-close");
+            }else{
+                //menu should hide
+                menu.style.display="none";
+                togglerIcon.classList.remove("fa-close");
+                togglerIcon.classList.add("fa-bars");
+            }
+
+        }
+    </script>
 </body>
 </html>

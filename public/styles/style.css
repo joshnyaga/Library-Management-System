@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap');
+:root{
+    --blue: #00aeef;
+    --red: #ec1c25;
+    --purple: #312f93;
+    --black: #252122;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    list-style: none;
+    color: var(--black);
+    font-family: 'Arimo', sans-serif;
+}
+
+header{
+    height: 5rem;
+    background-color: #eee;
+
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    margin: 0 2rem;
+    justify-content: space-between;
+}
+.mobile-nav{
+    display: none;
+}
+nav .img-logo{
+    width: 90px;
+    position: relative;
+}
+nav .img-logo img{
+    width: 100%;
+    object-fit: cover;
+}
+.nav-toggler{
+    display: none;
+    color: var(--black);
+    cursor: pointer;
+}
+nav .nav-middle{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.nav-buttons{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.btn{
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    display:block;
+    background-color: var(--blue);
+    color: #fff;
+    cursor: pointer;
+}
+
+
+@media(max-width: 678px){
+    nav .nav-middle{
+        display: none;
+    }
+    nav .buttons{
+        display: none;
+    }
+    /* display togggler */
+    .nav-toggler{
+        display: block;
+    }
+
+    .mobile-nav{
+       
+        position: absolute;
+        top: 5.5rem;
+        left: 0;
+        right: 0;
+    }
+    .mobile-nav li{
+        display: flex;
+        flex-direction: column;
+    }
+    .mobile-nav li:first-child{
+        border-top: solid black 1px;
+    }
+    .mobile-nav li{
+        border-bottom: solid black 1px;
+        padding: .4rem 0;
+    }
+    .mobile-nav li a{
+        padding: .5rem 1rem;
+    }
+    nav .nav-buttons{
+        display: none;
+    }
+    .btn-nav{
+        width: 100%;
+        margin-top: 1rem;
+
+        padding: 1rem 0;
+    }
+    
+}
